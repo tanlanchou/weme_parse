@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const log = require('./log');
-const slugify = require('slugify');
+const config = require('./config.json');
 
 function createFolder(tagName, title) {
     const currentDir = __dirname;
-    const downloadDir = path.join(currentDir, 'download');
+    const downloadDir = config.downloadDir || path.join(currentDir, 'download');
     const normalizedTagName = tagName.replace(/[<>:"\\|?*@]/g, "-").replace(/ /g, "_");
     const tagNameDir = path.join(downloadDir, normalizedTagName);
     const normalizedTitle = title.replace(/[<>:"\\|?*@]/g, "-").replace(/ /g, "_");;

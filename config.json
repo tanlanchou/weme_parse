@@ -1,5 +1,6 @@
 {
     "main": "https://weme2.com",
     "mainUrl": "/all",
-    "listUrl": "/all/page/"
+    "listUrl": "/all/page/",
+    "downloadDir": ""
 }
